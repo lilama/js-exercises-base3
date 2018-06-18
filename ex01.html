@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Exercice 1
+
+		Dans le fichier HTML fourni, changer l'image au survol de celle-ci par la deuxième. -->
+		<meta charset="utf-8">
+		<title>Exercice 1</title>
+	</head>
+	<body>
+      <img src="images/image1.jpg" id="image1" />
+      <script type="text/javascript">
+      	var changeImage = document.getElementById("image1");
+      	changeImage.onmouseover = function() {
+      		changeImage.src = "images/image1_2.jpg";
+     	};
+     	changeImage.onmouseout = function() {
+      		changeImage.src = "images/image1.jpg";
+     	};        		     	      	        		     	      	
+      </script>
+	</body>
+</html>
+

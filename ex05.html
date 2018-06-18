@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Exercice 5
+
+    Dans le fichier HTML fourni, faire comme dans l'exercice 1 mais avec 5 images.
+    Bonus Ne faire qu'une seule fonction JavaScript pour cet exercice. -->
+    <meta charset="utf-8">
+    <title>Exercice 5</title>
+  </head>
+  <body>
+    <div class="conteneur">
+      <img src="images5/image1.jpg" id="image1" />
+      <img src="images5/image2.jpg" id="image2"/>
+      <img src="images5/image3.jpg" id="image3"/>
+      <img src="images5/image4.jpg" id="image4"/>
+      <img src="images5/image5.jpg" id="image5"/>
+    </div>
+
+    <script type="text/javascript">
+      var images = document.getElementsByTagName('img');
+
+
+      for (let i = 0, c = images.length; i < c; i++) {
+        images[i].onmouseover = function() {
+            images[i].src = "images5/" + images[i].id + '_2.jpg';
+            }; 
+      };
+     
+        
+    </script>
+  </body>
+</html>

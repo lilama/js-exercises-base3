@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Exercice 3
+
+	Dans le fichier HTML fourni, afficher, dès que l'on entre une valeur dans l'input, une boite de dialogue avec la valeur de cet input. -->
+  <meta charset="utf-8">
+  <title>Exercice 3</title>
+</head>
+<body>
+  <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" />
+  </form>
+
+  <script type="text/javascript">
+  	var nom = document.getElementById("nom");
+  	nom.addEventListener("keypress", function(e) {
+  		if (e.keyCode == 13 && nom.value !== "") {
+ 			alert(nom.value);
+ 		};
+	});
+
+  	nom.addEventListener("click", function() {
+  		if (nom.value !== "")
+  			alert(nom.value);
+	});
+
+ 
+  	</script>
+</body>
+</html>

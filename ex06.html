@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Exercice 6
+
+    Dans le fichier HTML fourni, faire comme dans l'exercice 5 mais remettre l'image d'origine dès que la souris ne survol plus l'image.
+    Bonus Ne faire que deux fonctions JavaScript pour cet exercice. -->
+    <meta charset="utf-8">
+    <title>Exercice 6</title>
+  </head>
+  <body>
+      <img src="images5/image1.jpg" id="image1" />
+      <img src="images5/image2.jpg" id="image2" />
+      <img src="images5/image3.jpg" id="image3" />
+      <img src="images5/image4.jpg" id="image4" />
+      <img src="images5/image5.jpg" id="image5" />
+  </body>
+
+  <script type="text/javascript">
+    var images = document.getElementsByTagName('img');
+
+    for (let i = 0, c = images.length; i < c ; i++) {
+      images[i].onmouseover = function() {
+        images[i].src = "images5/" + images[i].id + '_2.jpg'; 
+      };
+
+      images[i].onmouseout = function() {
+        images[i].src = "images5/" + images[i].id + '.jpg';
+      }
+    };
+
+  </script>
+</html>
